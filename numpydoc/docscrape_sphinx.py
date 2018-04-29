@@ -130,11 +130,6 @@ class SphinxDocString(NumpyDocString):
         complicated to incorporate autosummary's signature mangling, as it
         relies on Sphinx's plugin mechanism.
         """
-        param = self._escape_args_and_kwargs(param.strip())
-        # param = param.strip()
-        # XXX: If changing the following, please check the rendering when param
-        # ends with '_', e.g. 'word_'
-        # See https://github.com/numpy/numpydoc/pull/144
         display_param = '**%s**' % param
 
         if not fake_autosummary:
